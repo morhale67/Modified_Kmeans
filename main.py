@@ -1,10 +1,9 @@
 import numpy as np
 from Clustering import plot_clusters
 from DataManagement import load_data
-from Clustering import modified_kmeans
 from DataManagement import write_clusters_to_json
 from Clustering import modified_kmeans
-from DataManagement import get_home
+
 
 
 # Inputs
@@ -13,6 +12,8 @@ template_path = 'Data/ClustersOutputTemplate.json'
 
 # Load Input Data
 drivers, drivers_home, drivers_carload, pickups = load_data(input_data_path)
+
+# sample for test
 drivers_home[2, :] = drivers_home[1, :]+0.5  # TODO: remove from final version
 drivers_carload = [10, 15, 60]  # TODO: remove from final version
 
